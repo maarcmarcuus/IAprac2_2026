@@ -8,7 +8,7 @@ S'utilitza l'algorisme **A*** per trobar el camí de cost mínim des de la posic
 
 **Estat de l'A***: `(posició_jugador, frozenset_d'anells_recollits)`
 
-**Funció de cost**: cada moviment (8 direccions, incloses diagonals) té cost 1.
+**Funció de cost**: cada moviment (4 direccions: amunt, avall, esquerra, dreta) té cost 1. No es permet el moviment diagonal.
 
 ### Heurística (h(n))
 
@@ -20,7 +20,7 @@ La heurística calcula una **cota inferior admissible** del cost restant:
    - Per a >5 objectius: **arbre d'expansió mínim (MST) de Prim** sobre els punts (admissible, és una cota inferior del camí).
 3. Encadena els nivells: estima la posició final de cada nivell amb "nearest-neighbour" per calcular el cost cap al nivell següent.
 
-**Admissibilitat**: la distància de Manhattan mai sobreestima el cost real perquè el moviment és 8-direccional (cost 1 per pas, Manhattan ≤ cost real).
+**Admissibilitat**: amb moviment estrictament 4-direccional (sense diagonals), la distància de Manhattan és exactament admissible: el cost real d'anar d'un punt a un altre sense barreres és exactament la distància de Manhattan, i les barreres només poden augmentar-lo mai reduir-lo. Per tant, h(n) ≤ cost real sempre.
 
 ### Mode Pista (HINT MODE)
 

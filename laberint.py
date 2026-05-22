@@ -58,7 +58,7 @@ C_BTN_ACTIVE = (50, 160,  80)
 C_WIN        = (30, 180,  30)
 C_LOSE       = (200,  30,  30)
 
-DIRECTIONS = [(-1,-1),(-1,0),(-1,1),(0,-1),(0,1),(1,-1),(1,0),(1,1)]
+DIRECTIONS = [(-1, 0), (1, 0), (0, -1), (0, 1)]   # 4-directional only
 
 
 # ─────────────────────────────────────────────
@@ -555,7 +555,7 @@ class LaberintGame:
 
         # Controls
         y += 8
-        for line in ["Controls:", "Fletxes / WASD / numpad", "per moure's"]:
+        for line in ["Controls:", "Fletxes / WASD", "4 direccions (no diagonal)"]:
             surf = self.font_sm.render(line, True, (150,150,150))
             self.screen.blit(surf, (x, y)); y += 16
 
@@ -586,13 +586,8 @@ class LaberintGame:
             pygame.K_LEFT:  (0, -1), pygame.K_RIGHT: (0, 1),
             pygame.K_w:     (-1, 0), pygame.K_s:     (1, 0),
             pygame.K_a:     (0, -1), pygame.K_d:     (0, 1),
-            # Diagonals via numpad
-            pygame.K_KP7:   (-1,-1), pygame.K_KP8:  (-1, 0), pygame.K_KP9: (-1, 1),
-            pygame.K_KP4:   (0, -1),                          pygame.K_KP6: (0,  1),
-            pygame.K_KP1:   (1, -1), pygame.K_KP2:  (1,  0), pygame.K_KP3: (1,  1),
-            # Q/E for diagonals
-            pygame.K_q:     (-1,-1), pygame.K_e:    (-1, 1),
-            pygame.K_z:     (1, -1), pygame.K_c:    (1,  1),
+            pygame.K_KP8:   (-1, 0), pygame.K_KP2:  (1,  0),
+            pygame.K_KP4:   (0, -1), pygame.K_KP6:  (0,  1),
         }
         while True:
             self.clock.tick(FPS)
