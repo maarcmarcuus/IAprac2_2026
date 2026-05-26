@@ -57,6 +57,7 @@ public class TripListFragment extends Fragment {
     }
 
     public void updateList() {
+        if (adapter == null) return;
         adapter.notifyDataSetChanged();
         if (MainActivity.trips.isEmpty()) {
             tvEmptyList.setVisibility(View.VISIBLE);

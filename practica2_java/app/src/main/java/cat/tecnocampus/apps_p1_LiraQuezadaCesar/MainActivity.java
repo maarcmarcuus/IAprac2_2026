@@ -20,30 +20,32 @@ public class MainActivity extends AppCompatActivity implements TripListFragment.
 
     private final TripListFragment tripListFragment = new TripListFragment();
 
-    private final ActivityResultLauncher<Intent> createTripLauncher = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),
-            result -> {
-                if (result.getResultCode() == RESULT_OK && result.getData() != null) {
-                    Intent data = result.getData();
-                    String destination = data.getStringExtra("destination");
-                    String country = data.getStringExtra("country");
-                    int days = data.getIntExtra("days", 0);
-                    String email = data.getStringExtra("email");
-                    double budget = data.getDoubleExtra("budget", 0.0);
-                    boolean favorite = data.getBooleanExtra("favorite", false);
-
-                    if (destination != null && country != null && email != null) {
-                        trips.add(new Trip(destination, country, days, email, budget, favorite));
-                        showList();
-                    }
-                }
-            }
-    );
+    private ActivityResultLauncher<Intent> createTripLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        createTripLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getResultCode() == RESULT_OK && result.getData() != null) {
+                        Intent data = result.getData();
+                        String destination = data.getStringExtra("destination");
+                        String country = data.getStringExtra("country");
+                        int days = data.getIntExtra("days", 0);
+                        String email = data.getStringExtra("email");
+                        double budget = data.getDoubleExtra("budget", 0.0);
+                        boolean favorite = data.getBooleanExtra("favorite", false);
+
+                        if (destination != null && country != null && email != null) {
+                            trips.add(new Trip(destination, country, days, email, budget, favorite));
+                            showList();
+                        }
+                    }
+                }
+        );
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(getString(R.string.title_list));

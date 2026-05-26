@@ -4,7 +4,11 @@ plugins {
 
 android {
     namespace = "cat.tecnocampus.apps_p1_LiraQuezadaCesar"
-    compileSdk = 36
+    compileSdk {
+        version = release(36) {
+            minorApiLevel = 1
+        }
+    }
 
     defaultConfig {
         applicationId = "cat.tecnocampus.apps_p1_grup101_16"
@@ -35,7 +39,6 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.0")
     implementation("androidx.recyclerview:recyclerview:1.4.0")
-    implementation("androidx.activity:activity:1.8.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
