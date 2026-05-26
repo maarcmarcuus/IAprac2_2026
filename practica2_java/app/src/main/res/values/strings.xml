@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Apps P2</string>
+
+    <string name="title_create">Crear viatge</string>
+    <string name="destination">Destinació</string>
+    <string name="country">País</string>
+    <string name="days">Dies</string>
+    <string name="email">Correu electrònic</string>
+    <string name="budget">Pressupost</string>
+    <string name="favorite">Viatge favorit</string>
+
+    <string name="save">Guardar</string>
+    <string name="clear">Esborrar</string>
+    <string name="back">Tornar enrere</string>
+
+    <string name="confirm_title">Confirmar</string>
+    <string name="confirm_message">Vols guardar aquest viatge?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+
+    <string name="error_required">Aquest camp és obligatori</string>
+    <string name="error_number">Introdueix un número vàlid</string>
+    <string name="error_email">Introdueix un correu vàlid</string>
+
+    <string name="title_detail">Dades del viatge</string>
+    <string name="label_destination">Destinació:</string>
+    <string name="label_country">País:</string>
+    <string name="label_days">Dies:</string>
+    <string name="label_email">Correu:</string>
+    <string name="label_budget">Pressupost:</string>
+    <string name="label_favorite">Favorit:</string>
+    <string name="title_list">Llistat de viatges</string>
+    <string name="add_trip">Afegir viatge</string>
+    <string name="empty_list">Encara no hi ha viatges. Afegeix-ne un amb el botó +.</string>
+
+    <string name="item_days_format">%1$d dies</string>
+    <string name="item_budget_format">%1$.2f €</string>
+    <string name="favorite_yes">Favorit: sí</string>
+    <string name="favorite_no">Favorit: no</string>
+
+    <string name="detail_destination_format">Destinació: %1$s</string>
+    <string name="detail_country_format">País: %1$s</string>
+    <string name="detail_days_format">Dies: %1$d</string>
+    <string name="detail_email_format">Correu: %1$s</string>
+    <string name="detail_budget_format">Pressupost: %1$.2f €</string>
+    <string name="detail_favorite_format">Favorit: %1$s</string>
+</resources>

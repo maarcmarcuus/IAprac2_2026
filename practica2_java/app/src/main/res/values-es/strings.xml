@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Apps P2</string>
+
+    <string name="title_create">Crear viaje</string>
+    <string name="destination">Destino</string>
+    <string name="country">País</string>
+    <string name="days">Días</string>
+    <string name="email">Correo electrónico</string>
+    <string name="budget">Presupuesto</string>
+    <string name="favorite">Viaje favorito</string>
+
+    <string name="save">Guardar</string>
+    <string name="clear">Borrar</string>
+    <string name="back">Volver atrás</string>
+
+    <string name="confirm_title">Confirmar</string>
+    <string name="confirm_message">¿Quieres guardar este viaje?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+
+    <string name="error_required">Este campo es obligatorio</string>
+    <string name="error_number">Introduce un número válido</string>
+    <string name="error_email">Introduce un correo válido</string>
+
+    <string name="title_detail">Datos del viaje</string>
+    <string name="label_destination">Destino:</string>
+    <string name="label_country">País:</string>
+    <string name="label_days">Días:</string>
+    <string name="label_email">Correo:</string>
+    <string name="label_budget">Presupuesto:</string>
+    <string name="label_favorite">Favorito:</string>
+    <string name="title_list">Listado de viajes</string>
+    <string name="add_trip">Añadir viaje</string>
+    <string name="empty_list">Todavía no hay viajes. Añade uno con el botón +.</string>
+
+    <string name="item_days_format">%1$d días</string>
+    <string name="item_budget_format">%1$.2f €</string>
+    <string name="favorite_yes">Favorito: sí</string>
+    <string name="favorite_no">Favorito: no</string>
+
+    <string name="detail_destination_format">Destino: %1$s</string>
+    <string name="detail_country_format">País: %1$s</string>
+    <string name="detail_days_format">Días: %1$d</string>
+    <string name="detail_email_format">Correo: %1$s</string>
+    <string name="detail_budget_format">Presupuesto: %1$.2f €</string>
+    <string name="detail_favorite_format">Favorito: %1$s</string>
+</resources>
