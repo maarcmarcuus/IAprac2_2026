@@ -1,3 +1,7 @@
 __pycache__/
 *.pyc
 *.pyo
+
+# Directoris de treball temporal (projecte original i extrets del zip)
+apps-practica-2-25-26-grup_101_16/
+project_source/
